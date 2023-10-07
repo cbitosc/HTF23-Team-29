@@ -3,6 +3,7 @@ package database
 import (
 	"log"
 	"os"
+	"zeroHunger/models"
 
 	"github.com/joho/godotenv"
 	"gorm.io/driver/postgres"
@@ -25,4 +26,5 @@ func Connection() {
 		panic("Unable to connect to db")
 	}
 	DB = conn
+	DB.AutoMigrate(&models.User{})
 }
