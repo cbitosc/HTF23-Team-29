@@ -7,24 +7,24 @@ import (
 )
 
 func Setup(app *fiber.App) {
-	app.Get("/register", controllers.Register)
+	app.Post("/register", controllers.Register)
 	app.Get("/login", controllers.Login)
-	app.Get("/logout")
+	// app.Get("/logout")
 
-	// delivery
-	delivery := app.Group("/delivery")
-	delivery.Get("/getRoutes")
-	delivery.Post("/setPath")
-	delivery.Post("/setStatus")
+	// // delivery
+	// delivery := app.Group("/delivery")
+	// delivery.Get("/getRoutes")
+	// delivery.Post("/setPath")
+	// delivery.Post("/setStatus")
 
-	// donor
-	donor := app.Group("/donor")
-	donor.Post("/addItem")
-	donor.Get("/prevItems")
-	donor.Get("/analytics")
+	// // donor
+	// donor := app.Group("/donor")
+	// donor.Post("/addItem")
+	// donor.Get("/prevItems")
+	// donor.Get("/analytics")
 
-	// volunteer
-	volunteer := app.Group("/volunteer")
-	volunteer.Post("/setDropInLocation")
-	volunteer.Get("/getStatus")
+	// // volunteer
+	// volunteer := app.Group("/volunteer")
+	// volunteer.Post("/setDropInLocation")
+	// volunteer.Get("/getStatus")
 }
