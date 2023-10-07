@@ -74,6 +74,6 @@ func Register(c *fiber.Ctx) error {
 	database.DB.Save(&user)
 
 	return c.JSON(fiber.Map{
-		"message": "successfull",
+		"message": ss,
 	})
 }
