@@ -2,11 +2,11 @@ package models
 
 type User struct {
 	ID          uint   `json:"id" gorm:"unique"`
-	UserName    string `json:"user_name"`
+	UserName    string `json:"userName"`
 	Password    []byte `json:"password"`
 	Jwt         string `json:"jwt"`
 	Role        string `json:"role"`
-	PhoneNumber uint   `json:"phone_number"`
-	Email       string `json:"email"`
+	PhoneNumber string `json:"phoneNumber"`
+	Email       string `json:"email" gorm:"unique"`
 	Location    string `json:"location"`
 }
