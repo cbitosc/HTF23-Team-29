@@ -10,8 +10,9 @@ func Setup(app *fiber.App) {
 	app.Post("/register", controllers.Register)
 	app.Get("/login", controllers.Login)
 	app.Get("/logout", controllers.Logout)
+	app.Get("/getUserInfo", controllers.UserInfo)
 
-	// delivery
+	// // delivery
 	// delivery := app.Group("/delivery")
 	// delivery.Get("/getRoutes")
 	// delivery.Post("/setPath")
@@ -20,7 +21,7 @@ func Setup(app *fiber.App) {
 	// donor
 	donor := app.Group("/donor")
 	donor.Post("/addItem", controllers.AddItems)
-	// donor.Get("/prevItems")
+	donor.Get("/getItems", controllers.GetItems)
 	// donor.Get("/analytics")
 
 	// // volunteer
